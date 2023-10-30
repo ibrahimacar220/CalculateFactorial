@@ -2,23 +2,16 @@
 
 int number = Convert.ToInt32( Console.ReadLine());
 
- int calculate(int x)
+int calculate(int x)
 {
-
-    for (int i = 0; i < x; i++)
+    if (x == 0 || x == 1)
     {
-        if (x == 1)
-        {
-            return 1;
-
-        }
-        else
-        {
-            return x * calculate(x - 1);
-        }
+        return 1;
     }
-    return 0;
-
+    else
+    {
+        return x * calculate(x - 1);
+    }
 }
 
 Console.WriteLine(calculate(number));
