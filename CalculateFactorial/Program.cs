@@ -2,7 +2,7 @@
 
 int number = Convert.ToInt32( Console.ReadLine());
 
-int calculate(int x)
+int Calculate(int x)
 {
     if (x == 0 || x == 1)
     {
@@ -10,9 +10,9 @@ int calculate(int x)
     }
     else
     {
-        return x * calculate(x - 1);
+        return x * Calculate(x - 1);
     }
 }
 
-Console.WriteLine(calculate(number));
+Console.WriteLine(Calculate(number));
 Console.ReadLine();
