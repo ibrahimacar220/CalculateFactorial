@@ -2,7 +2,7 @@
 
 int number = Convert.ToInt32( Console.ReadLine());
 
- int fnc(int x)
+ int calculate(int x)
 {
 
     for (int i = 0; i < x; i++)
@@ -14,12 +14,12 @@ int number = Convert.ToInt32( Console.ReadLine());
         }
         else
         {
-            return x * fnc(x - 1);
+            return x * calculate(x - 1);
         }
     }
     return 0;
 
 }
 
-Console.WriteLine(fnc(number));
+Console.WriteLine(calculate(number));
 Console.ReadLine();
